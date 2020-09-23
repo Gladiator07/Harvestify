@@ -1,10 +1,17 @@
 STRUCTURE OF THE PROJECT:
 
 1) Home Page ==> Information about farming and great UI
-2) Real time stock Page ==> Page giving real time prices of common crops
-							(Inspired by this: https://github.com/rahuldkjain/Crop_Prediction)
 
-3) Crop price prediction page based on district ==> https://www.kaggle.com/abhinand05/crop-production-in-india
-3) Crop recommendation Page ==> Data from here (https://github.com/Priyabrata017/Crop-prediction-using-Machine-Learning/blob/master/cpdata.csv)
+2) Real time stock Page ==> Page giving real time prices of common crops - (DO THIS ONLy IF CHANGE PERCENTAGE ISSUE IS RESOLVED)
 
-4) Fertilizer Prediction Page 
+(Inspired by this: https://github.com/rahuldkjain/Crop_Prediction)
+
+3) Crop price prediction page based on district
+https://data.gov.in/catalog/district-wise-season-wise-crop-production-statistics?filters%5Bfield_catalog_reference%5D=87631&format=json&offset=0&limit=6&sort%5Bcreated%5D=desc	
+
+4) Crop recommendation Page ==> 
+Data from here: 1)(https://github.com/Priyabrata017/Crop-prediction-using-Machine-Learning/blob/master/cpdata.csv)
+				2) https://github.com/Empharez/ML-Precision-Agriculture-Web-App
+				3) Final dataset - https://github.com/7NNS7/FYP-2020
+
+4) Fertilizer Prediction Page (on hold)
