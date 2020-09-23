@@ -4,6 +4,7 @@ STRUCTURE OF THE PROJECT:
 2) Real time stock Page ==> Page giving real time prices of common crops
 							(Inspired by this: https://github.com/rahuldkjain/Crop_Prediction)
 
+3) Crop price prediction page based on district ==> https://www.kaggle.com/abhinand05/crop-production-in-india
 3) Crop recommendation Page ==> Data from here (https://github.com/Priyabrata017/Crop-prediction-using-Machine-Learning/blob/master/cpdata.csv)
 
-4) Fertilizer Prediction Page
+4) Fertilizer Prediction Page 
