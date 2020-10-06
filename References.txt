@@ -1,0 +1,7 @@
+References
+
+1) Plant Disease Prediction
+- Datasets ==> 1) https://www.kaggle.com/vipoooool/new-plant-diseases-dataset 
+				  - Apple, cherry, corn, grape, orange, peach, pepper, Potato, Raspberry, soyabean
+				  - squash, Strawberry, Tomato
+				

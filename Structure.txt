@@ -1,17 +1,27 @@
 STRUCTURE OF THE PROJECT:
 
-1) Home Page ==> Information about farming and great UI
+1) Home Page
+   - Catchy image and slogans
+   - Great appearance and UI
+   - Navbar having all the services ==> (Home, Services, About Us, Contact Us
+   - Gallery (in form of boxes) having the information about services we provide
+   - Services ==> Crop and fertilizer recommendation system
+              ==> Plant disease prediction of common crops
+			  ==> Real-Time weather based on the location
+   - When we will click on the gallery boxes of services a page should open of that particular service 
 
-2) Real time stock Page ==> Page giving real time prices of common crops - (DO THIS ONLy IF CHANGE PERCENTAGE ISSUE IS RESOLVED)
 
-(Inspired by this: https://github.com/rahuldkjain/Crop_Prediction)
+2) Crop and fertilizer recommendation system
+   - Predictors are N, P, K, temperature, humidity, ph, rainfall
+   - Using these predictors, the model will predict the crop to grow for maximum yeild
+   - Also, it will suggest to add nutrients and fertilzers based on the N, P, K value
+   - Best performing models are Random Forest and XGBoost
 
-3) Crop price prediction page based on district
-https://data.gov.in/catalog/district-wise-season-wise-crop-production-statistics?filters%5Bfield_catalog_reference%5D=87631&format=json&offset=0&limit=6&sort%5Bcreated%5D=desc	
-
-4) Crop recommendation Page ==> 
-Data from here: 1)(https://github.com/Priyabrata017/Crop-prediction-using-Machine-Learning/blob/master/cpdata.csv)
-				2) https://github.com/Empharez/ML-Precision-Agriculture-Web-App
-				3) Final dataset - https://github.com/7NNS7/FYP-2020
-
-4) Fertilizer Prediction Page (on hold)
+3) Disease Prediction
+   - Dataset mentioned in references.txt
+   - Make a seperate webpage for this
+   - Will use AlexNet (pretrained) or custom CNN model
+   
+4) Real time weather
+   - Real time weather information on a seperate page
+   - Give some suggestions based on the future weather to farmers 
