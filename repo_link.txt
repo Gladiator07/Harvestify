@@ -1,3 +1,0 @@
-GitHub Repository Link : https://github.com/Gladiator07/AI-Agriculture
-
-This repository has all the code and data we have used in our project.
