@@ -18,14 +18,14 @@ x = response.json()
 if x["cod"] != "404":
     y = x["main"]
 
-    current_temperature = y["temp"]
+    current_temperature = round((y["temp"] - 273.15), 2)
     current_pressure = y["pressure"]
     current_humidity = y["humidity"]
     z = x["weather"]
 
     weather_description = z[0]["description"]
 
-    print("Temperature (in kelvin unit) = " + str(current_temperature))
+    print("Temperature (in degree celsius) = " + str(current_temperature))
     print("Atmospheric Pressure (in hPa unit) = " + str(current_pressure))
     print("Humidity (in percentage) = " + str(current_humidity))
     
