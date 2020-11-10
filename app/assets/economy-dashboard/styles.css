@@ -1,0 +1,243 @@
+body {
+    background-image: url("images/paper-texture.png");
+}
+blockquote {
+    border-left: 2px solid #065f66;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+blockquote p {
+    display: inline;
+}
+.author {
+    color: #8793A4;
+    font-family: 'Bookman Old Style', serif;
+    font-size: 20px;
+}
+.author::before {
+        content: '\2014 \00A0';
+}
+.header {
+    padding-top: 15px;
+}
+.heading {
+    color: #065f66;
+    font-family: Garamond, serif;
+    font-size: 50px;
+    font-weight: 900;
+}
+.quotes {
+    font-size: 23px;
+    margin-left: 10px;
+}
+.quotes-size {
+    color: #065f66;
+    font-size: 27px !important;
+}
+.chart-title {
+    color: #065F66;
+    font-size: 25px;
+    font-weight: 600;
+    height: 40px;
+    margin-left: 15px;
+    margin-bottom: 35px;
+    padding: 5px;
+    text-align: left;
+}
+.life-expec-chart-info {
+    padding-top: 10px;
+    top: 25px;
+}
+.play-btn {
+    cursor: pointer;
+    font-size: 30px !important;
+    margin-left: 40%;
+}
+.pause-btn {
+    cursor: pointer;
+    font-size: 30px !important;
+    margin-left: 40%;
+}
+.noUi-connect {
+    background: #c0392b;
+}
+.noUi-handle {
+    border: 0px;
+    box-shadow: inset 0 0 0px #c0392b,inset 0 0px 7px #c0392b,0 0px 6px -3px #c0392b;
+}
+.noUi-base {
+    cursor: pointer;
+}
+.noUi-horizontal .noUi-handle {
+    border-radius: 50%;
+    background-color: #c0392b;
+    cursor: pointer;
+    height: 24px;
+    left: -12px;
+    top: -9px;
+    width: 24px;
+}
+.noUi-handle::after, .noUi-handle::before {
+    display: none;
+}
+.noUi-value-sub {
+    color: #686868;
+    font-size: 11;
+}
+.noUi-value.noUi-value-horizontal.noUi-value-sub {
+    cursor: pointer;
+}
+.noUi-pips {
+    color: #686868;
+}
+#year-slider {
+    height: 8px;
+}
+.slider{
+    margin-left: 0%;
+    margin-top: 12px;
+}
+.population-chart-info{
+    padding-top: 10px;
+    top: 80px;
+}
+.chart-info-description {
+    color: #878787;
+    font-size: 18px;
+    text-align: left;
+}
+.economy-definition {
+    color: #878787;
+    display: block;
+    font-size: 23px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.remove-population-charts-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.population-charts-title{
+    color: #065F66;
+    font-size: 25px;
+    font-weight: 600;
+    height: 40px;
+    margin-bottom: 35px;
+    padding: 5px;
+    text-align: left;
+}
+@media (min-width: 1020px) {
+    .author {
+        color: #8793A4;
+        font-family: 'Bookman Old Style', serif;
+        font-size: 20px;
+        margin-left: 786px;
+    }
+}
+@media (max-width: 885px) {
+    .economy-definition {
+        color: #878787;
+        display: block;
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 861px) and (max-width: 1018px) {
+    .author {
+        color: #8793A4;
+        font-family: 'Bookman Old Style', serif;
+        font-size: 18px;
+        margin-left: 80%;
+    }
+}
+@media (min-width: 547px) and (max-width: 880px) {
+    .author {
+        color: #8793A4;
+        font-family: 'Bookman Old Style', serif;
+        font-size: 18px;
+        margin-left: 70%;
+    }
+}
+@media (min-width: 359px) and (max-width: 547px) {
+    .author {
+        color: #8793A4;
+        font-family: 'Bookman Old Style', serif;
+        font-size: 18px;
+        margin-left: 50%;
+    }
+}
+@media (max-width: 359px) {
+    .author {
+        color: #8793A4;
+        font-family: 'Bookman Old Style', serif;
+        font-size: 18px;
+        margin-left: 30%;
+    }
+    .heading {
+        color: #065f66;
+        font-family: Garamond, serif;
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 52px;
+    }
+}
+@media (max-width: 509px) {
+    .heading {
+        color: #065f66;
+        font-family: Garamond, serif;
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 52px;
+    }
+}
+@media (max-width: 544px) {
+    .slider {
+        margin-left: 5%;
+        margin-top: 12px;
+    }
+}
+@media (min-width:701px) {
+    #GDP-per-capita-bubble-chart {
+        height: 500px;
+    }
+}
+@media (max-width:700px) and (min-width: 501px) {
+    #GDP-per-capita-bubble-chart {
+        height: 400px;
+    }
+}
+@media (max-width:500px) {
+    #GDP-per-capita-bubble-chart {
+        height: 300px;
+    }
+}
+@media (max-width: 600px) {
+    #population-line-chart {
+        height: 300px;
+    }
+    #working-population-line-chart {
+        height: 300px;
+    }
+    #merchandise-imports-exports-column-chart {
+        height: 300px;
+    }
+}
+@media (min-width: 601px) {
+    #population-line-chart {
+        height: 400px;
+    }
+    #working-population-line-chart {
+        height: 400px;
+    }
+}
+@media (max-width: 991px) and (min-width: 601px) {
+    #merchandise-imports-exports-column-chart {
+        height: 400px;
+    }
+}
+@media (min-width: 992px) {
+    #merchandise-imports-exports-column-chart {
+        height: 500px;
+    }
+}
