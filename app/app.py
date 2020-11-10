@@ -19,8 +19,8 @@ def predict():
         N = int(request.form['nitrogen'])
         P = int(request.form['phosphorous'])
         K = int(request.form['pottasium'])
-        temperature = int(request.form['temperature'])
-        ph = int(request.form['ph'])
+        temperature = float(request.form['temperature'])
+        ph = float(request.form['ph'])
         rainfall = float(request.form['rainfall'])
         
         
