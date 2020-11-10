@@ -23,14 +23,13 @@
         <!-- Text Area -->
     	<div class="ml-container">
     		<form action="{{ url_for('predict') }}" method="POST">
-                <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
-                <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
-                <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
-                <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
-                <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
-                <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
-                <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
-                <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+                <input class="form-input" type="text" name="nitrogen" placeholder="Nitrogen content in your soil"><br>
+                <input class="form-input" type="text" name="phosphorous" placeholder="Phosphorous content in your soil"><br>
+                <input class="form-input" type="text" name="pottasium" placeholder="Pottasium content in your soil"><br>
+                <input class="form-input" type="text" name="temperature" placeholder="Current temperature in your area"><br>
+                <input class="form-input" type="text" name="ph" placeholder="ph level of your soil"><br>
+                <input class="form-input" type="text" name="rainfall" placeholder="Average rainfall in your area"><br>
+                
 
         		<input type="submit" class="my-cta-button" value="Predict">
         	</form>
