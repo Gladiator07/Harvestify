@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Crop Recommendation System</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Crop Recommendation System</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="nitrogen" placeholder="Nitrogen content in your soil"><br>
+                <input class="form-input" type="text" name="phosphorous" placeholder="Phosphorous content in your soil"><br>
+                <input class="form-input" type="text" name="pottasium" placeholder="Pottasium content in your soil"><br>
+                <input class="form-input" type="text" name="temperature" placeholder="Current temperature in your area"><br>
+                <input class="form-input" type="text" name="humidity" placeholder="Humidity in your area"><br>
+                <input class="form-input" type="text" name="ph" placeholder="ph level of your soil"><br>
+                <input class="form-input" type="text" name="rainfall" placeholder="Average rainfall in your area"><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Gladiator07/Diabetes-Prediction-WebApp"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/atharva-ingle-564430187"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'><b> with ❤️ by Atharva Ingle.</b></p>
+       </div>
+
+    </body>
+</html>
