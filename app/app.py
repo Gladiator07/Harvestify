@@ -25,6 +25,8 @@ def fertilizer_recommendation():
 @app.route('/disease')
 def disease_prediction():
 	return render_template('disease.html')
+
+	
 # @app.route('/predict', methods=['POST'])
 # def predict():
 #     if request.method == 'POST':
