@@ -19,12 +19,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 	
 	<!-- css files -->
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
-    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
-    <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
 	
-	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+	
 
 	<!-- google fonts -->
 	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h3 class="heading mb-sm-5 mb-4 text-center"> About Us</h3>
 		<div class="row core-grids">
 			<div class="col-lg-6 core-left">	
-				<img src="images/core.jpg" class="img-fliud" alt="" />
+				<img src="{{ url_for('static', filename='images/core.jpg') }}" class="img-fluid" alt="" />
 			</div>
 			<div class="col-lg-6 core-right">
 				<h3 class="mt-4">Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase Profit.</h3>
@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
 		<div class="row blog-grids">
 			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">	
-				<img src="images/s3.jpg" class="img-fluid" alt="" />
+				<img src="{{ url_for('static', filename='images/s3.jpg') }}" class="img-fluid" alt="" />
 				<a href="#">
 				<div class="blog-info">
 					<h4>Crop</h4>
@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</a>
 			</div>
 			<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">	
-				<img src="images/s2.jpg" class="img-fluid" alt=""/>
+				<img src="{{ url_for('static', filename='images/s2,jpg') }}" class="img-fluid" alt=""/>
 				<a href="#">
 				<div class="blog-info">
 					<h4>Fertilizer</h4>
@@ -122,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
 				
-					<img src="images/s4.jpg" class="img-fluid" alt="">
+					<img src="{{ url_for('static', filename='images/s4.jpg') }}" class="img-fluid" alt="">
 				
 				<!-- <img src="images/s4.jpg" class="img-fliud" alt="" /> -->
 				<a href="#">
