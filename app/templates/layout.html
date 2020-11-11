@@ -23,13 +23,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' /><!-- custom css -->
     <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/custom_style.css') }}" rel="stylesheet">
 	
 	
 
 	<!-- google fonts -->
 	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
 	<!-- //google fonts -->
-	
+
+<style>
+	header{
+		background-color: rgba(30, 30, 30, 1);
+	}
+</style>
 </head>
 <body>
 
@@ -52,30 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </header>
 <!-- //header -->
 
-<!-- banner -->
-<section class="banner_w3lspvt" id="home">
-	<div class="csslider infinity" id="slider1">
-	
-				<div class="banner-top">
-					<div class="overlay">
-						<div class="container">
-							<div class="w3layouts-banner-info text-center">
-								<h3 class="text-wh">Harvestify</h3>
-								<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your farming strategy.</b></h4>
-								<br>
-								<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
-								<p class="text-li mx-auto mt-2">
-									1. What crop to plant here? <br>
-									2. What fertilizer to use? <br>
-									3. Which disease do your crop have ?</p>
-							</div>
-						</div>
-					</div>
-				</div>
-	</div>
-</section>
+
 </html>
-<!-- //banner -->
 
 {% block body %} {% endblock %}
 

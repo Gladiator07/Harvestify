@@ -1,6 +1,29 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+	<div class="csslider infinity" id="slider1">
+	
+				<div class="banner-top">
+					<div class="overlay">
+						<div class="container">
+							<div class="w3layouts-banner-info text-center">
+								<h3 class="text-wh">Harvestify</h3>
+								<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your farming strategy.</b></h4>
+								<br>
+								<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+								<p class="text-li mx-auto mt-2">
+									1. What crop to plant here? <br>
+									2. What fertilizer to use? <br>
+									3. Which disease do your crop have ?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+</section>
+<!-- //banner -->
 
 <!-- core values -->
 <section class="core-value py-5">
@@ -43,7 +66,7 @@
 			</div>
 			<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
 				<img src="{{ url_for('static', filename='images/s2.jpg') }}" class="img-fluid" alt="" />
-				<a href="{{ url_for('fertlizer_recommendation') }}">
+				<a href="{{ url_for('fertilizer_recommendation') }}">
 					<div class="blog-info">
 						<h4>Fertilizer</h4>
 						<p class="mt-2">Recommendation about the type of fertilizer best suited for the particular soil
