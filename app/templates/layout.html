@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Harvestify - Home </title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+	
+	<!-- css files -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+	
+	
+
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+	<!-- //google fonts -->
+	
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<div class="container">
+		<!-- nav -->
+		<nav class="py-4 d-lg-flex">
+			<div id="logo">
+				<h1> <a href="index.html"><span class="fa fa-leaf"></span> Harvestify </a></h1>
+			</div>
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+			<ul class="menu mt-md-2 ml-auto">
+				<li class="mr-lg-4 mr-2 active"><a href="dashboard.html">Dashboard</a></li>
+			</ul>
+			
+		</nav>
+		<!-- //nav -->
+	</div>
+</header>
+<!-- //header -->
+
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+	<div class="csslider infinity" id="slider1">
+	
+				<div class="banner-top">
+					<div class="overlay">
+						<div class="container">
+							<div class="w3layouts-banner-info text-center">
+								<h3 class="text-wh">Harvestify</h3>
+								<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your farming strategy.</b></h4>
+								<br>
+								<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+								<p class="text-li mx-auto mt-2">
+									1. What crop to plant here? <br>
+									2. What fertilizer to use? <br>
+									3. Which disease do your crop have ?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+</section>
+</html>
+<!-- //banner -->
+
+{% block body %} {% endblock %}
+
+<!-- footer -->
+<footer class="text-center py-5">
+	<div class="container py-md-3">
+		<!-- logo -->
+		<h2 class="logo2 text-center">
+			<a href="index.html">
+				<span class="fa fa-leaf"></span> Harvestify
+			</a>
+		</h2>
+		<!-- //logo -->
+		<!-- address -->
+		<div class="contact-left-footer mt-4">
+
+				<p class="homelogo">
+					<a href="index.html">Home</a>
+					
+					<a href="dashboard.html">Dashboard</a>
+					
+					<!-- <a href="community.html">Community</a> -->
+				</p>
+		</div>
+		<div class="w3l-copy text-center">
+			<p class="text-da">An Environmental Intelligence Startup<br> </p>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<!-- move top icon -->
+<a href="#home" class="move-top text-center"></a>
+<!-- //move top icon -->
+</body>

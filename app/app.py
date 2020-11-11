@@ -13,6 +13,18 @@ app = Flask(__name__)
 def home():
 	return render_template('index.html')
 
+
+@app.route('/crop_prediction')
+def crop_prediction():
+	return render_template('crop.html')
+
+@app.route('/fertilizer')
+def fertilizer_recommendation():
+	return render_template('fertilizer.html')
+
+@app.route('/disease')
+def disease_prediction():
+	return render_template('disease.html')
 # @app.route('/predict', methods=['POST'])
 # def predict():
 #     if request.method == 'POST':
