@@ -34,32 +34,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <style>
 	header{
 		background-color: rgba(30, 30, 30, 1);
+		margin-top: 0rem;
+		display: block;
+
 	}
+	
 </style>
 </head>
 <body>
 
-<!-- header -->
-<header>
+	<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	<div class="container">
-		<!-- nav -->
-		<nav class="py-4 d-lg-flex">
-			<div id="logo">
-				<h1> <a href="{{url_for('home')}}"><span class="fa fa-leaf"></span> Harvestify </a></h1>
-			</div>
-			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
-			<ul class="menu mt-md-2 ml-auto">
-				<li class="mr-lg-4 mr-2 active"><a href="dashboard.html">About Us</a></li>
-			</ul>
-			
-		</nav>
-		<!-- //nav -->
+	  <a class="navbar-brand" href="#">
+			<img src="http://placehold.it/150x50?text=Logo" alt="">
+		  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+	  <div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+		  <li class="nav-item active">
+			<a class="nav-link" href="#">Home
+				  <span class="sr-only">(current)</span>
+				</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">About</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Services</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Contact</a>
+		  </li>
+		</ul>
+	  </div>
 	</div>
-</header>
-<!-- //header -->
+  </nav>
 
 
-</html>
+
 
 {% block body %} {% endblock %}
 
@@ -95,3 +110,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <a href="#home" class="move-top text-center"></a>
 <!-- //move top icon -->
 </body>
+</html>

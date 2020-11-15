@@ -1,12 +1,61 @@
-{% extends 'layout.html' %}
+<!-- {% extends 'layout.html' %} -->
+
+<style>
+  .form-bootstrap{
+    height: 80rem;
+    width: 100%;
+    
+  }
+  
+</style>
 
 {% block body %}
 
-<!-- core values -->
-<div class="h-100 row align-items-center">
-    <div class="col" style="background:red">
-      <h1>This is a centered grid</h1>
-    </div>
+
+<!-- <div class="form-bootstrap"> -->
+<!--Form Section-->
+<div style="width: 350px; height: 550px; margin: 0px auto; padding: 10px 10px; color: black; background-color: yellow;">
+	<h2>Please fill this form</h2><br>
+	<form>
+  <div class="form-group">
+    <label for="Nitrogen">Nitrogen</label>
+    <input type="text" class="form-control" id="Nitrogen" placeholder="Enter the value">
   </div>
-<!-- //core values -->
+  <div class="form-group">
+    <label for="Phosphorous">Phosphorous</label>
+    <input type="text" class="form-control" id="Phosphorous" placeholder="Enter the value">
+  </div>
+  <div class="form-group">
+    <label for="Pottasium">Pottasium</label>
+    <input type="text" class="form-control" id="Pottasium" placeholder="Enter the value">
+  </div>
+ <div class="form-group">
+    <label for="State">State</label>
+    <select class="form-control" id="State">
+      <option>Maharashtra</option>
+      <option>Punjab</option>
+      <option>Rajasthan</option>
+      <option>Kerela</option>
+      <option>Assam</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="City">City</label>
+    <select class="form-control" id="City">
+      <option>Pune</option>
+      <option>Nagpur</option>
+      <option>Mumbai</option>
+      <option>Akola</option>
+      <option>Jodhpur</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-info">Submit</button>
+</form>
+</div>
+
+<!-- </div> -->
+<!-- Form section -->
+
+<!-- Form section -->
+
 {% endblock %}
