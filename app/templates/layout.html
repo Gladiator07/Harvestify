@@ -1,115 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Harvestify - Home </title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<title>Harvestify - Home </title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-	
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	</body>
 	<!-- css files -->
-    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' /><!-- custom css -->
-    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+	<!-- bootstrap css -->
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+	<!-- custom css -->
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/custom_style.css') }}" rel="stylesheet">
-	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/state.js') }}"></script>
-	<script language="Javascript" src="{{ url_for('static', filename='scripts/jquery.js') }}"></script>
-	
-	
+
+	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+
 
 	<!-- google fonts -->
-	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
+		rel="stylesheet">
 	<!-- //google fonts -->
 
-<style>
-	header{
-		background-color: rgba(30, 30, 30, 1);
-		margin-top: 0rem;
-		display: block;
+	<style>
+		header {
+			background-color: rgba(30, 30, 30, 1);
+			margin-top: 0rem;
+			display: block;
 
-	}
-	
-</style>
+		}
+	</style>
 </head>
+
 <body>
 
 	<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-	<div class="container">
-	  <a class="navbar-brand" href="#">
-			<img src="http://placehold.it/150x50?text=Logo" alt="">
-		  </a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-	  <div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-		  <li class="nav-item active">
-			<a class="nav-link" href="#">Home
-				  <span class="sr-only">(current)</span>
-				</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">About</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Services</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Contact</a>
-		  </li>
-		</ul>
-	  </div>
-	</div>
-  </nav>
-
-
-
-
-{% block body %} {% endblock %}
-
-<!-- footer -->
-<footer class="text-center py-5">
-	<div class="container py-md-3">
-		<!-- logo -->
-		<h2 class="logo2 text-center">
-			<a href="index.html">
-				<span class="fa fa-leaf"></span> Harvestify
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="http://placehold.it/150x50?text=Logo" alt="">
 			</a>
-		</h2>
-		<!-- //logo -->
-		<!-- address -->
-		<div class="contact-left-footer mt-4">
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	{% block body %} {% endblock %}
+
+	<!-- footer -->
+	<footer class="text-center py-5">
+		<div class="container py-md-3">
+			<!-- logo -->
+			<h2 class="logo2 text-center">
+				<a href="index.html">
+					<span class="fa fa-leaf"></span> Harvestify
+				</a>
+			</h2>
+			<!-- //logo -->
+			<!-- address -->
+			<div class="contact-left-footer mt-4">
 
 				<p class="homelogo">
 					<a href="index.html">Home</a>
-					
+
 					<a href="dashboard.html">About Us</a>
-					
+
 					<!-- <a href="community.html">Community</a> -->
 				</p>
+			</div>
+			<div class="w3l-copy text-center">
+				<p class="text-da">An Environmental Intelligence Startup<br> </p>
+			</div>
 		</div>
-		<div class="w3l-copy text-center">
-			<p class="text-da">An Environmental Intelligence Startup<br> </p>
-		</div>
-	</div>
-</footer>
-<!-- //footer -->
+	</footer>
+	<!-- //footer -->
 
-<!-- move top icon -->
-<a href="#home" class="move-top text-center"></a>
-<!-- //move top icon -->
+	<!-- move top icon -->
+	<a href="#home" class="move-top text-center"></a>
+	<!-- //move top icon -->
 </body>
+
 </html>

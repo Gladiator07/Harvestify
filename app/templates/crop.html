@@ -7,20 +7,20 @@
 
   }
 
-  body {
-    background-color: rgb(22, 12, 12) !important;
-  }
+  
 </style>
 
 {% block body %}
 
 
-<!-- <div class="form-bootstrap"> -->
 <!--Form Section-->
-<h2 style="text-align: center; margin:90px; color:black"><b>Get the information for growing the best crops for maximum
+<br><br>
+<h2 style="text-align: center; margin:39px; color:black"><b>Get the information for growing the best crops for maximum
     yield</b></h2><br>
 
-<div style="width: 350px; height: 800px; margin: -5px auto; padding: 10px 10px; color: black;">
+
+
+<div style="width: 350px; height: 530px; margin: 19px auto;color: white; background-color:black; border-radius: 25px; padding: 10px 10px;">
   <form>
     <div class="form-group">
       <label for="Nitrogen"><b>Nitrogen</b></label>
@@ -34,12 +34,22 @@
       <label for="Pottasium"><b>Pottasium</b></label>
       <input type="text" class="form-control" id="Pottasium" placeholder="Enter the value" style="font-weight: bold;">
     </div>
-
+    <div class="form-group">
+      <label for="State"><b>State</b></label>
+      <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control"
+        required></select>
+        <br>
+      <label for="City"><b>City</b></label>
+      <select id="state" class="form-control" required></select>
+      <script language="javascript">print_state("sts");</script>
+    </div>
 
     <button type="submit" class="btn btn-info">Predict</button>
   </form>
 </div>
 
+
+<br> <br> <br>
 
 <!-- Form section -->
 
