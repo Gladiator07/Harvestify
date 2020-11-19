@@ -1,16 +1,15 @@
 <!-- {% extends 'layout.html' %} -->
 
 <style>
-  .form-bootstrap{
+  .form-bootstrap {
     height: 80rem;
     width: 100%;
-    
+
   }
 
-body{
-  background-color: rgb(22, 12, 12) !important;
-}
-  
+  body {
+    background-color: rgb(22, 12, 12) !important;
+  }
 </style>
 
 {% block body %}
@@ -18,55 +17,29 @@ body{
 
 <!-- <div class="form-bootstrap"> -->
 <!--Form Section-->
-<h2 style= "text-align: center; margin:90px; color:black"><b>Get the information for growing the best crops for maximum yield</b></h2><br>
+<h2 style="text-align: center; margin:90px; color:black"><b>Get the information for growing the best crops for maximum
+    yield</b></h2><br>
 
 <div style="width: 350px; height: 800px; margin: -5px auto; padding: 10px 10px; color: black;">
-	<form>
-  <div class="form-group">
-    <label for="Nitrogen"><b>Nitrogen</b></label>
-    <input type="text" class="form-control" id="Nitrogen" placeholder="Enter the value" style="font-weight: bold;">
-  </div>
-  <div class="form-group">
-    <label for="Phosphorous"><b>Phosphorous</b></label>
-    <input type="text" class="form-control" id="Phosphorous" placeholder="Enter the value" style="font-weight: bold;">
-  </div>
-  <div class="form-group">
-    <label for="Pottasium"><b>Pottasium</b></label>
-    <input type="text" class="form-control" id="Pottasium" placeholder="Enter the value" style="font-weight: bold;">
-  </div>
- <!-- <div class="form-group">
-    <label for="State"><b>State</b></label>
-    <select class="form-control" id="State">
-      <option>Maharashtra</option>
-      <option>Punjab</option>
-      <option>Rajasthan</option>
-      <option>Kerela</option>
-      <option>Assam</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="City"><b>City</b></label>
-    <select class="form-control" id="City">
-      <option>Pune</option>
-      <option>Nagpur</option>
-      <option>Mumbai</option>
-      <option>Akola</option>
-      <option>Jodhpur</option>
-    </select>
-  </div> -->
-  <div class="form-group">
-    <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control d-inline-block"  style="font-weight: bold;"></select>
-<select id ="state" class="form-control" ></select style="font-weight: bold;">
-<br> <br>
-<script language="javascript">print_state("sts");</script>
-  </div>
+  <form>
+    <div class="form-group">
+      <label for="Nitrogen"><b>Nitrogen</b></label>
+      <input type="text" class="form-control" id="Nitrogen" placeholder="Enter the value" style="font-weight: bold;">
+    </div>
+    <div class="form-group">
+      <label for="Phosphorous"><b>Phosphorous</b></label>
+      <input type="text" class="form-control" id="Phosphorous" placeholder="Enter the value" style="font-weight: bold;">
+    </div>
+    <div class="form-group">
+      <label for="Pottasium"><b>Pottasium</b></label>
+      <input type="text" class="form-control" id="Pottasium" placeholder="Enter the value" style="font-weight: bold;">
+    </div>
 
-  <button type="submit" class="btn btn-info">Predict</button>
-</form>
+
+    <button type="submit" class="btn btn-info">Predict</button>
+  </form>
 </div>
 
-<!-- </div> -->
-<!-- Form section -->
 
 <!-- Form section -->
 
