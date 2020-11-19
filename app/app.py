@@ -67,7 +67,7 @@ def crop_prediction():
             my_prediction = classifier.predict(data)
             final_prediction = my_prediction[0]
 
-            return render_template('crop_result.html', prediction=final_prediction)
+            return render_template('crop-result.html', prediction=final_prediction)
             
         else:
            
