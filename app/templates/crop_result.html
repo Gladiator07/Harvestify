@@ -1,13 +1,27 @@
-{% extends 'layout.html' %} 
+{% extends 'layout.html' %} {% block body %}
 
-{% block body %}
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container" style="width:100%; height: 900px; background-color:white">
-      <h1 class="display-4">Fluid jumbotron</h1>
-      <h4 class="display-4">{{nitrogen, phosphorous, pottasium, state, city, temperature, humidity}}</h4>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-    </div>
+<!-- <div class="jumbotron jumbotron-fluid">
+  <div
+    class="container"
+    style="width: 100%; height: 900px; background-color: white"
+  >
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <h4 class="display-4">
+      You should grow {{ prediction }} in your farm
+    </h4>
+    <p class="lead">
+      This is a modified jumbotron that occupies the entire horizontal space of
+      its parent.
+    </p>
   </div>
+</div> -->
+<br /><br />
+<br /><br />
 
+<div class="container" style="width:100rem; height:50rem; ">
+<div class="alert alert-success" role="alert">
+    <h5 class="alert-heading">The best crop you should grow in your farm for maximum yield is</p>
+    <h4 class="alert-heading">{{ prediction }}</h4> 
+  </div>
+</div>
 {% endblock %}

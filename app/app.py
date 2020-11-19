@@ -58,19 +58,21 @@ def crop_prediction():
         
         
         
-        state = request.form.get("stt")
+        # state = request.form.get("stt")
         city = request.form.get("city")
         
         if weather_fetch(city) != None:
             temperature, humidity = weather_fetch(city)
-            return render_template('crop_result.html', nitrogen=N, phosphorous=P, pottasium=K, state=state, city=city, temperature=temperature, humidity=humidity, ph=ph, rainfall=rainfall)
+            data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
+            my_prediction = classifier.predict(data)
+            final_prediction = my_prediction[0]
+
+            return render_template('crop_result.html', prediction=final_prediction)
             
         else:
            
             return render_template('try_again.html')
-        # data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
-        # my_prediction = classifier.predict(data)
-        # final_prediction = my_prediction[0]
+        
 
         
 
