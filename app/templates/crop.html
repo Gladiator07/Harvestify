@@ -6,8 +6,6 @@
     width: 100%;
 
   }
-
-  
 </style>
 
 {% block body %}
@@ -20,31 +18,48 @@
 
 
 
-<div style="width: 350px; height: 530px; margin: 19px auto;color: white; background-color:black; border-radius: 25px; padding: 10px 10px;">
+<div style="width: 350px; height: 50rem; margin: 19px auto;color: black; border-radius: 25px; padding: 10px 10px;">
   <form method="POST" action="{{ url_for('crop_prediction') }}">
     <div class="form-group">
       <label for="Nitrogen"><b>Nitrogen</b></label>
-      <input type="text" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value" style="font-weight: bold;">
+      <input type="text" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value"
+        style="font-weight: bold;">
     </div>
     <div class="form-group">
       <label for="Phosphorous"><b>Phosphorous</b></label>
-      <input type="text" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value" style="font-weight: bold;">
+      <input type="text" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value"
+        style="font-weight: bold;">
     </div>
+
     <div class="form-group">
       <label for="Pottasium"><b>Pottasium</b></label>
-      <input type="text" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value" style="font-weight: bold;">
+      <input type="text" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value"
+        style="font-weight: bold;">
+    </div>
+    <div class="form-group">
+      <label for="ph"><b>ph level</b></label>
+      <input type="text" class="form-control" id="ph" name="ph" placeholder="Enter the value"
+        style="font-weight: bold;">
+    </div>
+    <div class="form-group">
+      <label for="Rainfall"><b>Rainfall</b></label>
+      <input type="text" class="form-control" id="Rainfall" name="rainfall" placeholder="Enter the value"
+        style="font-weight: bold;">
     </div>
     <div class="form-group">
       <label for="State"><b>State</b></label>
       <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control"
-        required></select>
-        <br>
+        style="font-weight: bold;" required></select>
+      <br>
       <label for="City"><b>City</b></label>
-      <select id="state" class="form-control" name="city" required></select>
+      <select id="state" class="form-control" name="city" style="font-weight: bold;" required></select>
       <script language="javascript">print_state("sts");</script>
     </div>
 
-    <button type="submit" class="btn btn-info">Predict</button>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-info" style="color: black; font-weight:bold;">Predict</button>
+    </div>
+
   </form>
 </div>
 
