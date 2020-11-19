@@ -14,8 +14,8 @@ def home():
 	return render_template('index.html')
 
 
-@app.route('/crop_prediction')
-def crop_prediction():
+@app.route('/crop-recommend')
+def crop_recommend():
 	return render_template('crop.html')
 
 @app.route('/fertilizer')
@@ -27,23 +27,25 @@ def disease_prediction():
 	return render_template('disease.html')
 
 	
-@app.route('/predict', methods=['POST'])
-def predict():
+@app.route('/crop-predict', methods=['POST'])
+def crop_prediction():
     if request.method == 'POST':
         N = int(request.form['nitrogen'])
         P = int(request.form['phosphorous'])
         K = int(request.form['pottasium'])
-        temperature = float(request.form['temperature'])
-        humidity = float(request.form['humidity'])
-        ph = float(request.form['ph'])
-        rainfall = float(request.form['rainfall'])
+        # temperature = float(request.form['temperature'])
+        # humidity = float(request.form['humidity'])
+        # ph = float(request.form['ph'])
+        # rainfall = float(request.form['rainfall'])
         
         
-        data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
-        my_prediction = classifier.predict(data)
-        final_prediction = my_prediction[0]
-        
-        return render_template('result.html', prediction=final_prediction)
+        # data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
+        # my_prediction = classifier.predict(data)
+        # final_prediction = my_prediction[0]
+        state = request.form.get("stt")
+        city = request.form.get("city")
+
+        return render_template('crop_result.html', nitrogen=N, phosphorous=P, pottasium=K, state=state, city=city)
 
 if __name__ == '__main__':
 	app.run(debug=True)

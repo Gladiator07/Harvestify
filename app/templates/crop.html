@@ -21,18 +21,18 @@
 
 
 <div style="width: 350px; height: 530px; margin: 19px auto;color: white; background-color:black; border-radius: 25px; padding: 10px 10px;">
-  <form>
+  <form method="POST" action="{{ url_for('crop_prediction') }}">
     <div class="form-group">
       <label for="Nitrogen"><b>Nitrogen</b></label>
-      <input type="text" class="form-control" id="Nitrogen" placeholder="Enter the value" style="font-weight: bold;">
+      <input type="text" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value" style="font-weight: bold;">
     </div>
     <div class="form-group">
       <label for="Phosphorous"><b>Phosphorous</b></label>
-      <input type="text" class="form-control" id="Phosphorous" placeholder="Enter the value" style="font-weight: bold;">
+      <input type="text" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value" style="font-weight: bold;">
     </div>
     <div class="form-group">
       <label for="Pottasium"><b>Pottasium</b></label>
-      <input type="text" class="form-control" id="Pottasium" placeholder="Enter the value" style="font-weight: bold;">
+      <input type="text" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value" style="font-weight: bold;">
     </div>
     <div class="form-group">
       <label for="State"><b>State</b></label>
@@ -40,7 +40,7 @@
         required></select>
         <br>
       <label for="City"><b>City</b></label>
-      <select id="state" class="form-control" required></select>
+      <select id="state" class="form-control" name="city" required></select>
       <script language="javascript">print_state("sts");</script>
     </div>
 
