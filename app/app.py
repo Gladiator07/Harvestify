@@ -73,8 +73,8 @@ def crop_prediction():
            
             return render_template('try_again.html')
         
-@app.route('/fertilizer')
-def fert_recommend():  
+# @app.route('/fertilizer')
+# def fert_recommend():  
 
 
 
