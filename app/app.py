@@ -111,7 +111,7 @@ def fert_recommend():
             key = "Klow"
 
     d = {
-        'Nhigh': """The N value of soil is high and might give rise to weeds.
+        'NHigh': """The N value of soil is high and might give rise to weeds.
         <br/> Please consider the following suggestions:
 
         <br/>1. Manure – adding manure is one of the simplest ways to amend your soil with nitrogen. Be careful as there are various types of manures with varying degrees of nitrogen.
