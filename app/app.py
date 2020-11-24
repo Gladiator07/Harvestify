@@ -80,7 +80,7 @@ def fert_recommend():
     N = int(request.form['nitrogen'])
     P = int(request.form['phosphorous'])
     K = int(request.form['pottasium'])
-    ph = float(request.form['ph'])
+    # ph = float(request.form['ph'])
 
     df = pd.read_csv('../Data_final/FertilizerData.csv')
 
