@@ -1,5 +1,5 @@
 # Importing essential libraries
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Markup
 import pickle
 import numpy as np
 import pandas as pd
@@ -150,7 +150,7 @@ def fert_recommend():
         }
 
 
-    response =  str(d[key])
+    response =  Markup(str(d[key]))
     
         
     return render_template('fertilizer-result.html', recommendation=response)
