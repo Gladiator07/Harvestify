@@ -10,7 +10,8 @@ classifier = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
 
-
+# =========================================================================================
+# Custom functions for calculations
 def weather_fetch(city_name):
     api_key = config.weather_api_key
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -27,7 +28,8 @@ def weather_fetch(city_name):
         return temperature, humidity
     else:
         return None
-
+# ===============================================================================================
+# RENDER HOME PAGES
 
 @app.route('/')
 def home():
@@ -44,18 +46,12 @@ def fertilizer_recommendation():
     return render_template('fertilizer.html')
 
 
+# ===============================================================================================
+# RENDER PREDICTION PAGES
+
 @app.route('/disease')
 def disease_prediction():
-    if request.method == 'POST':
-		if 'file' not in request.files:
-			return redirect(request.url)
-		file = request.files.get('file')
-		if not file:
-			return
-		img_bytes = file.read()
-		prediction_name = get_prediction(img_bytes)
-		return render_template('disease-result.html', name=prediction_name.lower(), description=diseases[prediction_name])
-    return render_template('disease.html')
+    render_template('disease.html')
 
 
 @app.route('/crop-predict', methods=['POST'])
@@ -215,6 +211,9 @@ def fert_recommend():
     response = Markup(str(d[key]))
 
     return render_template('fertilizer-result.html', recommendation=response)
+
+
+# ===============================================================================================
 
 
 if __name__ == '__main__':
