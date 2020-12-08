@@ -1,10 +1,9 @@
 # Importing essential libraries
 from flask import Flask, render_template, request, Markup
-import pickle
 import numpy as np
 import pandas as pd
-import requests
-import json
+import requests, json, config, pickle
+
 # Load the Random Forest CLassifier model
 filename = '../Trained_Model/RandomForest.pkl'
 classifier = pickle.load(open(filename, 'rb'))
@@ -47,6 +46,15 @@ def fertilizer_recommendation():
 
 @app.route('/disease')
 def disease_prediction():
+    if request.method == 'POST':
+		if 'file' not in request.files:
+			return redirect(request.url)
+		file = request.files.get('file')
+		if not file:
+			return
+		img_bytes = file.read()
+		prediction_name = get_prediction(img_bytes)
+		return render_template('disease-result.html', name=prediction_name.lower(), description=diseases[prediction_name])
     return render_template('disease.html')
 
 
