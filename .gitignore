@@ -4,3 +4,4 @@ TEST_Project/
 .ipynb_checkpoints/
 .vscode/
 config.py
+__pycache__/
