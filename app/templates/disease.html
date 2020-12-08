@@ -1,9 +1,22 @@
 <!-- {% extends 'layout.html' %} -->
 
 {% block body %}
-<div class="h-100 row align-items-center">
-    <div class="col" style="background:red">
-      <h1>This is a centered grid</h1>
-    </div>
-  </div>
+
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+<button type="button" class="btn btn-primary btn-block" onclick="document.getElementById('inputFile').click()">Add Image</button>
+      <div class="form-group inputDnD">
+        <label class="sr-only" for="inputFile">File Upload</label>
+        <input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file">
+      </div>
+</div>
 {% endblock %}
