@@ -2,16 +2,69 @@
 from flask import Flask, render_template, request, Markup
 import numpy as np
 import pandas as pd
-import requests, json, config, pickle
+import requests
+import json
+import config
+import pickle
+import torch
+from torchvision import transforms
+from PIL import Image
+from model import ResNet9
 
+disease_classes = ['Apple___Apple_scab',
+                   'Apple___Black_rot',
+                   'Apple___Cedar_apple_rust',
+                   'Apple___healthy',
+                   'Blueberry___healthy',
+                   'Cherry_(including_sour)___Powdery_mildew',
+                   'Cherry_(including_sour)___healthy',
+                   'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot',
+                   'Corn_(maize)___Common_rust_',
+                   'Corn_(maize)___Northern_Leaf_Blight',
+                   'Corn_(maize)___healthy',
+                   'Grape___Black_rot',
+                   'Grape___Esca_(Black_Measles)',
+                   'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)',
+                   'Grape___healthy',
+                   'Orange___Haunglongbing_(Citrus_greening)',
+                   'Peach___Bacterial_spot',
+                   'Peach___healthy',
+                   'Pepper,_bell___Bacterial_spot',
+                   'Pepper,_bell___healthy',
+                   'Potato___Early_blight',
+                   'Potato___Late_blight',
+                   'Potato___healthy',
+                   'Raspberry___healthy',
+                   'Soybean___healthy',
+                   'Squash___Powdery_mildew',
+                   'Strawberry___Leaf_scorch',
+                   'Strawberry___healthy',
+                   'Tomato___Bacterial_spot',
+                   'Tomato___Early_blight',
+                   'Tomato___Late_blight',
+                   'Tomato___Leaf_Mold',
+                   'Tomato___Septoria_leaf_spot',
+                   'Tomato___Spider_mites Two-spotted_spider_mite',
+                   'Tomato___Target_Spot',
+                   'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
+                   'Tomato___Tomato_mosaic_virus',
+                   'Tomato___healthy']
+disease_model_path = '../Trained_Model/plant_disease_model.pth'
+disease_model = ResNet9(3, len(disease_classes))
+disease_model.load_state_dict(torch.load(
+    disease_model_path, map_location=torch.device('cpu')))
+disease_model.eval()
 # Load the Random Forest CLassifier model
-filename = '../Trained_Model/RandomForest.pkl'
-classifier = pickle.load(open(filename, 'rb'))
+crop_recommendation_model_path = '../Trained_Model/RandomForest.pkl'
+crop_recommendation_model = pickle.load(
+    open(crop_recommendation_model_path, 'rb'))
 
 app = Flask(__name__)
 
 # =========================================================================================
 # Custom functions for calculations
+
+
 def weather_fetch(city_name):
     api_key = config.weather_api_key
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -28,49 +81,75 @@ def weather_fetch(city_name):
         return temperature, humidity
     else:
         return None
+
+
+def transform_image(img_to_t):
+    transform = transforms.Compose([
+        transforms.Resize(256),
+        transforms.ToTensor(),
+        ])
+
+    img_t= transform(img)
+    batch_t= torch.unsqueeze(img_t, 0)
+    return batch_t
+
+def predict_image(img, model):
+    xb= transform_image(img)
+    # Get predictions from model
+    yb= model(xb)
+    # Pick index with highest probability
+    _, preds= torch.max(yb, dim=1)
+    prediction= disease_classes[preds[0].item()]
+    # Retrieve the class label
+    return prediction
+
+
+img= Image.open('test_2.jpg')
+p= predict_image(img, disease_model)
+print(p)
 # ===============================================================================================
 # RENDER HOME PAGES
 
-@app.route('/')
+
+@ app.route('/')
 def home():
     return render_template('index.html')
 
 
-@app.route('/crop-recommend')
+@ app.route('/crop-recommend')
 def crop_recommend():
     return render_template('crop.html')
 
 
-@app.route('/fertilizer')
+@ app.route('/fertilizer')
 def fertilizer_recommendation():
     return render_template('fertilizer.html')
 
 
+@ app.route('/disease')
+def disease():
+    render_template('disease.html')
 # ===============================================================================================
 # RENDER PREDICTION PAGES
 
-@app.route('/disease')
-def disease_prediction():
-    render_template('disease.html')
 
-
-@app.route('/crop-predict', methods=['POST'])
+@ app.route('/crop-predict', methods=['POST'])
 def crop_prediction():
     if request.method == 'POST':
-        N = int(request.form['nitrogen'])
-        P = int(request.form['phosphorous'])
-        K = int(request.form['pottasium'])
-        ph = float(request.form['ph'])
-        rainfall = float(request.form['rainfall'])
+        N= int(request.form['nitrogen'])
+        P= int(request.form['phosphorous'])
+        K= int(request.form['pottasium'])
+        ph= float(request.form['ph'])
+        rainfall= float(request.form['rainfall'])
 
         # state = request.form.get("stt")
-        city = request.form.get("city")
+        city= request.form.get("city")
 
         if weather_fetch(city) != None:
-            temperature, humidity = weather_fetch(city)
-            data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
-            my_prediction = classifier.predict(data)
-            final_prediction = my_prediction[0]
+            temperature, humidity= weather_fetch(city)
+            data= np.array([[N, P, K, temperature, humidity, ph, rainfall]])
+            my_prediction= crop_recommendation_model.predict(data)
+            final_prediction= my_prediction[0]
 
             return render_template('crop-result.html', prediction=final_prediction)
 
@@ -79,42 +158,42 @@ def crop_prediction():
             return render_template('try_again.html')
 
 
-@app.route('/fertilizer-predict', methods=['POST'])
+@ app.route('/fertilizer-predict', methods=['POST'])
 def fert_recommend():
-    crop_name = str(request.form['cropname'])
-    N = int(request.form['nitrogen'])
-    P = int(request.form['phosphorous'])
-    K = int(request.form['pottasium'])
+    crop_name= str(request.form['cropname'])
+    N= int(request.form['nitrogen'])
+    P= int(request.form['phosphorous'])
+    K= int(request.form['pottasium'])
     # ph = float(request.form['ph'])
 
-    df = pd.read_csv('../Data_final/FertilizerData.csv')
+    df= pd.read_csv('../Data_final/FertilizerData.csv')
 
-    nr = df[df['Crop'] == crop_name]['N'].iloc[0]
-    pr = df[df['Crop'] == crop_name]['P'].iloc[0]
-    kr = df[df['Crop'] == crop_name]['K'].iloc[0]
+    nr= df[df['Crop'] == crop_name]['N'].iloc[0]
+    pr= df[df['Crop'] == crop_name]['P'].iloc[0]
+    kr= df[df['Crop'] == crop_name]['K'].iloc[0]
 
-    n = nr - N
-    p = pr - P
-    k = kr - K
-    temp = {abs(n): "N", abs(p): "P", abs(k): "K"}
-    max_value = temp[max(temp.keys())]
+    n= nr - N
+    p= pr - P
+    k= kr - K
+    temp= {abs(n): "N", abs(p): "P", abs(k): "K"}
+    max_value= temp[max(temp.keys())]
     if max_value == "N":
         if n < 0:
-            key = 'NHigh'
+            key= 'NHigh'
         else:
-            key = "Nlow"
+            key= "Nlow"
     elif max_value == "P":
         if p < 0:
-            key = 'PHigh'
+            key= 'PHigh'
         else:
-            key = "Plow"
+            key= "Plow"
     else:
         if k < 0:
-            key = 'KHigh'
+            key= 'KHigh'
         else:
-            key = "Klow"
+            key= "Klow"
 
-    d = {
+    d= {
         'NHigh': """The N value of soil is high and might give rise to weeds.
         <br/> Please consider the following suggestions:
 
@@ -139,13 +218,12 @@ def fert_recommend():
         <br/>4. <i>Sugar</i> – In limited studies, it was shown that adding sugar to your soil can help potentially reduce the amount of nitrogen is your soil. Sugar is partially composed of carbon, an element which attracts and soaks up the nitrogen in the soil. This is similar concept to adding sawdust/woodchips which are high in carbon content.
 
         <br/>5. Add composted manure to the soil.
-        
+
         <br/>6. Plant Nitrogen fixing plants like peas or beans.
-        
+
         <br/>7. <i>Use NPK fertilizers with high N value.
 
-        <br/>8. <i>Do nothing</i> – It may seem counter-intuitive, but if you already have plants that are producing lots of foliage, it may be best to let them continue to absorb all the nitrogen to amend the soil for your next crops."""
-        ,
+        <br/>8. <i>Do nothing</i> – It may seem counter-intuitive, but if you already have plants that are producing lots of foliage, it may be best to let them continue to absorb all the nitrogen to amend the soil for your next crops.""",
 
         'PHigh': """The P value of your soil is high.
         <br/> Please consider the following suggestions:
@@ -176,9 +254,9 @@ def fert_recommend():
         <br/>6. <i>Clay soil</i> – introducing clay particles into your soil can help retain & fix phosphorus deficiencies.
 
         <br/>7. <i>Ensure proper soil pH</i> – having a pH in the 6.0 to 7.0 range has been scientifically proven to have the optimal phosphorus uptake in plants.
-        
+
         <br/>8. If soil pH is low, add lime or potassium carbonate to the soil as fertilizers. Pure calcium carbonate is very effective in increasing the pH value of the soil.
-        
+
         <br/>9. If pH is high, addition of appreciable amount of organic matter will help acidify the soil. Application of acidifying fertilizers, such as ammonium sulfate, can help lower soil pH""",
 
         'KHigh': """The K value of your soil is high.
@@ -213,9 +291,18 @@ def fert_recommend():
     return render_template('fertilizer-result.html', recommendation=response)
 
 
+# @app.route('disease-predict', methods=['GET', 'POST'])
+# def disease_prediction():
+#     if request.method == 'POST':
+#         file = request.files.get('file')
+
+#         img = file.read()
+
+#         prediction =
+
+
 # ===============================================================================================
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-
