@@ -8,6 +8,7 @@ import torch.nn.functional as F # for functions for calculating loss
 import torchvision.transforms as transforms # for transforming images into tensors 
 from torchvision.utils import make_grid # for data checking
 from torchvision.datasets import ImageFolder # for working with classes and images
+
 def accuracy(outputs, labels):
     _, preds = torch.max(outputs, dim=1)
     return torch.tensor(torch.sum(preds == labels).item() / len(preds))
@@ -74,14 +75,3 @@ class ResNet9(DiseaseClassificationBase):
         out = self.res2(out) + out
         out = self.classifier(out)
         return out
-
-
-def predict_image(img, model):
-    # Convert to a batch of 1
-    xb = img.unsqueeze(0)
-    # Get predictions from model
-    yb = model(xb)
-    # Pick index with highest probability
-    _, preds  = torch.max(yb, dim=1)
-    # Retrieve the class label
-    return train_ds.classes[preds[0].item()]
