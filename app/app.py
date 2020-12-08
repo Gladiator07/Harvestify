@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 def weather_fetch(city_name):
-    api_key = "9d7cde1f6d07ec55650544be1631307e"
+    api_key = config.weather_api_key
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
     complete_url = base_url + "appid=" + api_key + "&q=" + city_name
