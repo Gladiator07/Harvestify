@@ -1,24 +1,22 @@
 {% extends 'layout.html' %} {% block body %}
-<h1>Sorry we couldn't process your request currently</h1>
-<h1>Please try again</h1>
 
-<div class="d-flex justify-content-center">
+
+<div class="container" style="height: 30rem; width:80rem;justify-content:center;">
+  <h1 style="margin-top: 260px; justify-content: center;"><b>Sorry we couldn't process your request currently. <br> Please try again</b></h1> <br>
+
   <a href="{{ url_for('home') }}">
-    <button
-      type="submit"
-      class="btn btn-info"
-      style="
+    <button type="submit" class="btn btn-info" style="
         color: black;
         font-weight: bold;
         width: 130px;
         height: 50px;
         border-radius: 12px;
         font-size: 21px;
-      "
-    >
+        margin: 2px 2px;
+      ">
       Try again
     </button>
   </a>
-</div>
 
+</div>
 {% endblock %}
