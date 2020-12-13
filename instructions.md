@@ -1,4 +1,4 @@
-# Instructions to setup and run the projects locally
+# Instructions to setup and run the project locally
 
 - Install anaconda
 - Open conda prompt
