@@ -3,6 +3,7 @@
 from flask import Flask, render_template, request, Markup
 import numpy as np
 import pandas as pd
+from disease_dic import disease_dic
 import requests, json, config, pickle, io 
 import torch
 from torchvision import transforms
@@ -274,7 +275,7 @@ def fert_recommend():
 
         <br/>9. If pH is high, addition of appreciable amount of organic matter will help acidify the soil. Application of acidifying fertilizers, such as ammonium sulfate, can help lower soil pH""",
 
-        'KHigh': """The K value of your soil is high.
+        'KHigh': """The K value of your soil is high</b>.
         <br/> Please consider the following suggestions:
 
         <br/><br/>1. <i>Loosen the soil</i> deeply with a shovel, and water thoroughly to dissolve water-soluble potassium. Allow the soil to fully dry, and repeat digging and watering the soil two or three more times.
@@ -316,8 +317,11 @@ def disease_prediction():
             return
         img = file.read()
         
+        
 
         prediction = predict_image(img)
+
+        prediction = Markup(str(disease_dic[prediction]))
         return render_template('disease-result.html', prediction=prediction)
 
     return render_template('disease.html')
