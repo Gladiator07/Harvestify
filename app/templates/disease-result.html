@@ -3,7 +3,13 @@
 
 
 {% block body %}
-<div class="container" style="height: 40rem; width:60rem; display:flex; justify-content:center;">
-    <h1 style="margin: 259px 50px;"><b>{{ prediction }}</b></h1>
+<div class="container py-2 mx-auto my-50 h-10 " style="margin: 9rem;">
+  <div class="row">
+      <div class="col-sm py-2 py-md-3">
+          <div class="card card-body" style="justify-content: center; background-color:blanchedalmond">
+               <h1 class="text-center" style="color: black;">{{ prediction }}</h1>
+          </div>
+      </div>
   </div>
+</div>
 {% endblock %}
