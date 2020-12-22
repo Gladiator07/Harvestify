@@ -156,7 +156,7 @@ def fertilizer_recommendation():
 
 @ app.route('/disease')
 def disease():
-    render_template('disease.html')
+    return render_template('disease.html')
 
 # ===============================================================================================
 
