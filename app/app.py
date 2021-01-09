@@ -60,7 +60,7 @@ disease_classes = ['Apple___Apple_scab',
                    'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
                    'Tomato___Tomato_mosaic_virus',
                    'Tomato___healthy']
-disease_model_path = '../Trained_Model/plant_disease_model.pth'
+disease_model_path = 'Trained_Model/plant_disease_model.pth'
 disease_model = ResNet9(3, len(disease_classes))
 disease_model.load_state_dict(torch.load(
     disease_model_path, map_location=torch.device('cpu')))
@@ -69,7 +69,7 @@ disease_model.eval()
 
 # Loading crop recommendation model
 
-crop_recommendation_model_path = '../Trained_Model/RandomForest.pkl'
+crop_recommendation_model_path = 'Trained_Model/RandomForest.pkl'
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
@@ -200,7 +200,7 @@ def fert_recommend():
     K = int(request.form['pottasium'])
     # ph = float(request.form['ph'])
 
-    df = pd.read_csv('../Data_final/FertilizerData.csv')
+    df = pd.read_csv('Data/FertilizerData.csv')
 
     nr = df[df['Crop'] == crop_name]['N'].iloc[0]
     pr = df[df['Crop'] == crop_name]['P'].iloc[0]
