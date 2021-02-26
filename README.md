@@ -94,10 +94,13 @@ Please read [CONTRIBUTING.md](https://github.com/Gladiator07/Harvestify/blob/mas
 You can use this project for further developing it and adding your work in it. If you use this project, kindly mention the original source of the project and mention the link of this repo in your report.
 
 ## Further Improvements
+This was my first big project so there are lot of things to improve upon
 
-- Frontend can be made more nicer (PS: I suck at frontend development)
-- More data can be collected manually via web scrapping to make the system more accurate
-- Additional plant images can be collected to make the disease detection part more robust and generalized
+- CSS code is totally messed up :pensive: (some code in file and some inline)
+- Frontend can be made more nicer (PS: I suck at frontend development) :cry:	
+- More data can be collected manually via web scrapping to make the system more accurate :monocle_face:	
+- Additional plant images can be collected to make the disease detection part more robust and generalized :face_with_head_bandage:
+- Modularized code can be written instead of writing in Jupyter Notebooks (will follow this in upcoming projects)
 
 ## License
 This project is licensed under [GNU (GENERAL PUBLIC LICENSE)](https://github.com/Gladiator07/Harvestify/blob/master/LICENSE).
