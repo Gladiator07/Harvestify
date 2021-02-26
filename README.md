@@ -101,3 +101,7 @@ You can use this project for further developing it and adding your work in it. I
 
 ## License
 This project is licensed under [GNU (GENERAL PUBLIC LICENSE)](https://github.com/Gladiator07/Harvestify/blob/master/LICENSE).
+
+## Contact
+
+#### If you have any doubt or want to contribute feel free to email me or hit me up on [LinkedIn](https://www.linkedin.com/in/atharva-ingle-564430187/)
