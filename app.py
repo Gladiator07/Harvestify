@@ -156,11 +156,7 @@ def fertilizer_recommendation():
 # render disease prediction input page
 
 
-@ app.route('/disease')
-def disease():
-    title = 'Harvestify - Disease Detection'
 
-    return render_template('disease.html', title=title)
 
 # ===============================================================================================
 
@@ -251,15 +247,17 @@ def disease_prediction():
             return redirect(request.url)
         file = request.files.get('file')
         if not file:
-            return
-        img = file.read()
+            return render_template('disease.html', title=title)
+        try:
+            img = file.read()
 
-        prediction = predict_image(img)
+            prediction = predict_image(img)
 
-        prediction = Markup(str(disease_dic[prediction]))
-        return render_template('disease-result.html', prediction=prediction, title=title)
-
-    return render_template('disease.html')
+            prediction = Markup(str(disease_dic[prediction]))
+            return render_template('disease-result.html', prediction=prediction, title=title)
+        except:
+            pass
+    return render_template('disease.html', title=title)
 
 
 # ===============================================================================================
