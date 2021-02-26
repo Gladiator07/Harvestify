@@ -1,7 +1,7 @@
 # HARVESTIFY
 #### A simple machine learning based website which recommends best crop to grow, fertilizers to use and the diseases caught by your crops
 
-## Motivation
+## MOTIVATION
 - Farming is one of the major sectors that influences a country’s economic growth. 
 
 - In country like India, majority of the population is dependent on agriculture for their livelihood. Many new technologies, such as Machine Learning and Deep Learning, are being implemented into agriculture so that it is easier for farmers to grow and maximize their yield. 
@@ -34,4 +34,21 @@
 <code><img height="30" src="https://matplotlib.org/_static/logo2.svg"></code>
 <code><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1280px-Scikit_learn_logo_small.svg.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/pytorch/pytorch/39fa0b5d0a3b966a50dcd90b26e6c36942705d6d/docs/source/_static/img/pytorch-logo-dark.svg"></code>
+
+## DEPLOYMENT
+
+#### This website is deployed at [Heroku](https://www.heroku.com/)
+#### You can access it [here](https://ml-crop-consultant.herokuapp.com/)
+
+## FEATURES
+
+- Crop recommendation system
+
+![demo](demo\crop-recommendation.gif)
+
+- Fertilizer suggestion system
+![demo](demo\fertilizer-recommendation.gif)
+
+- Disease Detection system
+![demo](demo\disease-prediction.gif)
 
