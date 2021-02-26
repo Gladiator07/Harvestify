@@ -91,5 +91,11 @@ Please read [CONTRIBUTING.md](https://github.com/Gladiator07/Harvestify/blob/mas
 ## Usage
 You can use this project for further developing it and adding your work in it. If you use this project, kindly mention the original source of the project and mention the link of this repo in your report.
 
+## Further Improvements
+
+- Frontend can be made more nicer (PS: I suck at frontend development)
+- More data can be collected manually via web scrapping to make the system more accurate
+- Additional plant images can be collected to make the disease detection part more robust and generalized
+
 ## License
 This project is licensed under [GNU (GENERAL PUBLIC LICENSE)](https://github.com/Gladiator07/Harvestify/blob/master/LICENSE).
