@@ -42,13 +42,15 @@
 
 ## FEATURES
 
-- Crop recommendation system
+- ### Crop recommendation system
 
-<code><iframe src="https://giphy.com/embed/90JbjdAa5nDq3TJh5u" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></code>
+![demo](https://media.giphy.com/media/90JbjdAa5nDq3TJh5u/giphy.gif)
 
-- Fertilizer suggestion system
-<code><iframe src="https://giphy.com/embed/FLftUXMFo8N2bBjAXq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></code>
+- ### Fertilizer suggestion system
 
-- Disease Detection system
-<code><iframe src="https://giphy.com/embed/NnMwEp2tGZdfnJbyjr" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></code>
+![demo](https://media.giphy.com/media/FLftUXMFo8N2bBjAXq/giphy.gif)
+
+
+- ### Disease Detection system
+![demo](https://media.giphy.com/media/NnMwEp2tGZdfnJbyjr/giphy.gif)
 
