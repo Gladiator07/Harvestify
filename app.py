@@ -156,11 +156,11 @@ def fertilizer_recommendation():
 # render disease prediction input page
 
 
-@ app.route('/disease')
-def disease():
-    title = 'Harvestify - Disease Detection'
+# @ app.route('/disease')
+# def disease():
+#     title = 'Harvestify - Disease Detection'
 
-    return render_template('disease.html', title=title)
+#     return render_template('disease.html', title=title)
 
 # ===============================================================================================
 
@@ -259,7 +259,7 @@ def disease_prediction():
         prediction = Markup(str(disease_dic[prediction]))
         return render_template('disease-result.html', prediction=prediction, title=title)
 
-    return render_template('disease.html')
+    return render_template('disease.html', title=title)
 
 
 # ===============================================================================================
