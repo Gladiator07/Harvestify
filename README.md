@@ -40,7 +40,36 @@
 #### This website is deployed at [Heroku](https://www.heroku.com/)
 #### You can access it [here](https://ml-crop-consultant.herokuapp.com/)
 
-## FEATURES
+## How to use
+- Crop Recommendation system ==> enter the corresponding nutrient values of your soil, state and city. Note that, the N-P-K (Nitrogen-Phosphorous-Pottasium) values to be entered should be the ratio between them. Refer [this website](https://www.gardeningknowhow.com/garden-how-to/soil-fertilizers/fertilizer-numbers-npk.htm) for more information.
+
+- Fertilizer suggestion system ==> Enter the nutrient contents of your soil and the crop you want to grow. The algorithm will tell which nutrient the soil has excess of or lacks. Accordingly, it will give suggestions for buying fertilizers.
+
+- Disease Detection System ==> Upload an image of leaf of your plant. The algorithm will tell the crop type and whether it is diseased or healthy. If it is diseased, it will tell you the cause of the disease and suggest you how to prevent/cure the disease accordingly.
+Note that, for now it only supports following crops
+
+<details>
+  <summary>Supported crops
+</summary>
+
+- Apple
+- Blueberry
+- Cherry
+- Corn
+- Grape
+- Pepper
+- Orange
+- Peach
+- Potato
+- Soybean
+- Strawberry
+- Tomato
+- Squash
+- Raspberry
+</details>
+
+
+## DEMO
 
 - ### Crop recommendation system
 
@@ -54,6 +83,13 @@
 - ### Disease Detection system
 ![demo](https://media.giphy.com/media/NnMwEp2tGZdfnJbyjr/giphy.gif)
 
-## Contribution
+
+
+## Contribute
 Please read [CONTRIBUTING.md](https://github.com/Gladiator07/Harvestify/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
+## Usage
+You can use this project for further developing it and adding your work in it. If you use this project, kindly mention the original source of the project and mention the link of this repo in your report.
+
+## License
+This project is licensed under [GNU (GENERAL PUBLIC LICENSE)](https://github.com/Gladiator07/Harvestify/blob/master/LICENSE).
