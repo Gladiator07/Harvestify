@@ -44,11 +44,11 @@
 
 - Crop recommendation system
 
-![demo](demo\crop-recommendation.gif)
+<iframe src="https://giphy.com/embed/90JbjdAa5nDq3TJh5u" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 - Fertilizer suggestion system
-![demo](demo\fertilizer-recommendation.gif)
+<iframe src="https://giphy.com/embed/FLftUXMFo8N2bBjAXq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 - Disease Detection system
-![demo](demo\disease-prediction.gif)
+<iframe src="https://giphy.com/embed/NnMwEp2tGZdfnJbyjr" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
 
