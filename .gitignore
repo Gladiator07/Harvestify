@@ -3,7 +3,6 @@ References/
 TEST_Project/
 .ipynb_checkpoints/
 .vscode/
-config.py
 __pycache__/
 New Plant Diseases Dataset(Augmented)/
 Docs/
