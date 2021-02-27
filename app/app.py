@@ -133,28 +133,30 @@ app = Flask(__name__)
 
 @ app.route('/')
 def home():
-    return render_template('index.html')
+    title = 'Harvestify - Home'
+    return render_template('index.html', title=title)
 
 # render crop recommendation form page
 
 
 @ app.route('/crop-recommend')
 def crop_recommend():
-    return render_template('crop.html')
+    title = 'Harvestify - Crop Recommendation'
+    return render_template('crop.html', title=title)
 
 # render fertilizer recommendation form page
 
 
 @ app.route('/fertilizer')
 def fertilizer_recommendation():
-    return render_template('fertilizer.html')
+    title = 'Harvestify - Fertilizer Suggestion'
+
+    return render_template('fertilizer.html', title=title)
 
 # render disease prediction input page
 
 
-@ app.route('/disease')
-def disease():
-    return render_template('disease.html')
+
 
 # ===============================================================================================
 
@@ -165,6 +167,8 @@ def disease():
 
 @ app.route('/crop-predict', methods=['POST'])
 def crop_prediction():
+    title = 'Harvestify - Crop Recommendation'
+
     if request.method == 'POST':
         N = int(request.form['nitrogen'])
         P = int(request.form['phosphorous'])
@@ -181,17 +185,19 @@ def crop_prediction():
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
 
-            return render_template('crop-result.html', prediction=final_prediction)
+            return render_template('crop-result.html', prediction=final_prediction, title=title)
 
         else:
 
-            return render_template('try_again.html')
+            return render_template('try_again.html', title=title)
 
 # render fertilizer recommendation result page
 
 
 @ app.route('/fertilizer-predict', methods=['POST'])
 def fert_recommend():
+    title = 'Harvestify - Fertilizer Suggestion'
+
     crop_name = str(request.form['cropname'])
     N = int(request.form['nitrogen'])
     P = int(request.form['phosphorous'])
@@ -227,27 +233,31 @@ def fert_recommend():
 
     response = Markup(str(fertilizer_dic[key]))
 
-    return render_template('fertilizer-result.html', recommendation=response)
+    return render_template('fertilizer-result.html', recommendation=response, title=title)
 
 # render disease prediction result page
 
 
 @app.route('/disease-predict', methods=['GET', 'POST'])
 def disease_prediction():
+    title = 'Harvestify - Disease Detection'
+
     if request.method == 'POST':
         if 'file' not in request.files:
             return redirect(request.url)
         file = request.files.get('file')
         if not file:
-            return
-        img = file.read()
+            return render_template('disease.html', title=title)
+        try:
+            img = file.read()
 
-        prediction = predict_image(img)
+            prediction = predict_image(img)
 
-        prediction = Markup(str(disease_dic[prediction]))
-        return render_template('disease-result.html', prediction=prediction)
-
-    return render_template('disease.html')
+            prediction = Markup(str(disease_dic[prediction]))
+            return render_template('disease-result.html', prediction=prediction, title=title)
+        except:
+            pass
+    return render_template('disease.html', title=title)
 
 
 # ===============================================================================================
