@@ -39,7 +39,7 @@
 
 #### Deployment is done using [deploy](https://github.com/Gladiator07/Harvestify/tree/deploy) branch
 #### This website is deployed at [Heroku](https://www.heroku.com/)
-#### You can access it [here](https://ml-crop-consultant.herokuapp.com/)
+#### You can access it [here](https://harvestify.herokuapp.com/)
 
 
 ## How to use
