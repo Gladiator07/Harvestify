@@ -1,0 +1,26 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+
+
+<div class="container py-2 mx-auto my-50 h-10 text-center" style="margin: 9rem;">
+  <div class="row">
+    <div class="col-sm py-2 py-md-3">
+      <div class="card card-body" style="justify-content: center; background-color:blanchedalmond">
+        <h1 class="text-center" style="color: black; font-size: 20px;"><b>Sorry we couldn't process your request
+            currently. <br> Please try again</b></h1>
+
+
+        <a href="{{ url_for('home') }}">
+          <button type="submit" class="btn btn-info text-center" style="
+        color: black;
+        font-weight: bold;
+        margin: 1rem;">
+            Try again
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

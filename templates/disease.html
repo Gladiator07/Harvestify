@@ -1,0 +1,54 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<style>
+  html body {
+    background-color: rgb(206, 206, 228);
+  }
+</style>
+<br /><br />
+  <h2 style="text-align: center; margin: 0px; color: black">
+    <b>Find out which disease has been caught by your plant</b>
+  </h2>
+  <br />
+  <br>
+
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+    <br>
+    <br>
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Predict</button>
+
+
+  </form>
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
