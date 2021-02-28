@@ -40,7 +40,7 @@
 #### Deployment is done using [deploy](https://github.com/Gladiator07/Harvestify/tree/deploy) branch
 #### This website is deployed at [Heroku](https://www.heroku.com/)
 #### You can access it [here](https://harvestify.herokuapp.com/)
-
+#### Note: The website may take a minute to load sometimes, as the server may be in hibernate state
 
 ## How to use
 - Crop Recommendation system ==> enter the corresponding nutrient values of your soil, state and city. Note that, the N-P-K (Nitrogen-Phosphorous-Pottasium) values to be entered should be the ratio between them. Refer [this website](https://www.gardeningknowhow.com/garden-how-to/soil-fertilizers/fertilizer-numbers-npk.htm) for more information.
