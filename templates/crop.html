@@ -1,14 +1,9 @@
 {% extends 'layout.html' %} {% block body %}
 
 <style>
-
-    html body {
-      background-color: rgb(206, 206, 228);
-
-      
+  html body {
+    background-color: rgb(206, 206, 228);
   }
-
-  
 </style>
 <!--Form Section-->
 <br /><br />
@@ -31,7 +26,7 @@
     <div class="form-group">
       <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
       <input
-        type="text"
+        type="number"
         class="form-control"
         id="Nitrogen"
         name="nitrogen"
@@ -45,7 +40,7 @@
         ><b>Phosphorous</b></label
       >
       <input
-        type="text"
+        type="number"
         class="form-control"
         id="Phosphorous"
         name="phosphorous"
@@ -58,7 +53,7 @@
     <div class="form-group">
       <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
       <input
-        type="text"
+        type="number"
         class="form-control"
         id="Pottasium"
         name="pottasium"
@@ -70,7 +65,7 @@
     <div class="form-group">
       <label for="ph" style="font-size: 17px"><b>ph level</b></label>
       <input
-        type="text"
+        type="number"
         class="form-control"
         id="ph"
         name="ph"
@@ -80,9 +75,11 @@
       />
     </div>
     <div class="form-group">
-      <label for="Rainfall" style="font-size: 17px"><b>Rainfall (in mm)</b></label>
+      <label for="Rainfall" style="font-size: 17px"
+        ><b>Rainfall (in mm)</b></label
+      >
       <input
-        type="text"
+        type="number"
         class="form-control"
         id="Rainfall"
         name="rainfall"
@@ -92,14 +89,13 @@
       />
     </div>
     <div class="form-group">
-      <label for="State" style="font-size: 17px "><b>State</b></label>
+      <label for="State" style="font-size: 17px"><b>State</b></label>
       <select
         onchange="print_city('state', this.selectedIndex);"
         id="sts"
         name="stt"
         class="form-control"
-        style="font-weight: bold; color: black;"
-        
+        style="font-weight: bold; color: black"
         required
       ></select>
       <br />
@@ -108,7 +104,7 @@
         id="state"
         class="form-control"
         name="city"
-        style="font-weight: bold; color: black;"
+        style="font-weight: bold; color: black"
         required
       ></select>
       <script language="javascript">
@@ -120,15 +116,20 @@
       <button
         type="submit"
         class="btn btn-info"
-        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+        style="
+          color: black;
+          font-weight: bold;
+          width: 130px;
+          height: 50px;
+          border-radius: 12px;
+          font-size: 21px;
+        "
       >
         Predict
       </button>
     </div>
   </form>
 </div>
-
-
 
 <!-- Form section -->
 
