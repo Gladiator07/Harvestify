@@ -81,7 +81,9 @@ Note that, for now it only supports following crops
 - Raspberry
 </details>
 
-
+## How to run locally
+- Clone the project with `git clone https://github.com/Gladiator07/Harvestify.git` or you can just download the code and unzip it
+- 
 ## DEMO 
 
 - ### Crop recommendation system
