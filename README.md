@@ -52,7 +52,7 @@ This is a POC(Proof of concept) kind-of project. The data used here comes up wit
 #### You can access it [here](https://harvestify.herokuapp.com/)
 #### Note: The website may take a minute to load sometimes, as the server may be in hibernate state
 
-## How to use 
+## How to use 💻
 - Crop Recommendation system ==> enter the corresponding nutrient values of your soil, state and city. Note that, the N-P-K (Nitrogen-Phosphorous-Pottasium) values to be entered should be the ratio between them. Refer [this website](https://www.gardeningknowhow.com/garden-how-to/soil-fertilizers/fertilizer-numbers-npk.htm) for more information.
 Note: When you enter the city name, make sure to enter mostly common city names. Remote cities/towns may not be available in the [Weather API](https://openweathermap.org/) from where humidity, temperature data is fetched.
 
@@ -81,10 +81,26 @@ Note that, for now it only supports following crops
 - Raspberry
 </details>
 
-## How to run locally
-- Clone the project with `git clone https://github.com/Gladiator07/Harvestify.git` or you can just download the code and unzip it
-- 
-## DEMO 
+## How to run locally 🛠️
+- Before the following steps make sure you have [git](https://git-scm.com/download [Anaconda](https://www.anaconda.com/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed on your system
+- Clone the complete project with `git clone https://github.com/Gladiator07/Harvestify.git` or you can just download the code and unzip it
+- **Note:** The master branch doesn't have the updated code used for deployment, to download the updated code used for deployment you can use the following command
+  ```
+  ❯ git clone -b deploy https://github.com/Gladiator07/Harvestify.git 
+  ```
+- `deploy` branch has only the code required for deploying the app (rest of the code that was used for training the models, data preparation can be accessed on `master` branch)
+- Once the project is cloned, open anaconda prompt in the directory where the project was cloned and paste the following block
+  ```
+  conda create -n harvestify python=3.6.12
+  pip install -r requirements.txt
+  conda activate harvestify
+  ```
+- And finally run the project with
+  ```
+  python app.py
+  ```
+- Open the localhost url provided after running `app.py` and now you can use the project locally in your web browser.
+## DEMO
 
 - ### Crop recommendation system
 
@@ -100,10 +116,10 @@ Note that, for now it only supports following crops
 
 
 
-## Contribute 💻
+## Contribute 👨‍💻
 Please read [CONTRIBUTING.md](https://github.com/Gladiator07/Harvestify/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Usage 
+## Usage ⚙️
 You can use this project for further developing it and adding your work in it. If you use this project, kindly mention the original source of the project and mention the link of this repo in your report.
 
 ## Further Improvements 📈
