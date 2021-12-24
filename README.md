@@ -82,7 +82,7 @@ Note that, for now it only supports following crops
 </details>
 
 ## How to run locally 🛠️
-- Before the following steps make sure you have [git](https://git-scm.com/download) [Anaconda](https://www.anaconda.com/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed on your system
+- Before the following steps make sure you have [git](https://git-scm.com/download), [Anaconda](https://www.anaconda.com/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed on your system
 - Clone the complete project with `git clone https://github.com/Gladiator07/Harvestify.git` or you can just download the code and unzip it
 - **Note:** The master branch doesn't have the updated code used for deployment, to download the updated code used for deployment you can use the following command
   ```
