@@ -133,7 +133,7 @@ This was my first big project so there are lot of things to improve upon
 - Modularized code can be written instead of writing in Jupyter Notebooks (will follow this in upcoming projects)
 
 ## Credits 💳
-This project is heavily inspired from **[this GitHub repository](https://github.com/7NNS7/Recommendation-System-for-Farming)** (especially the crop recommendation and fertilizer recommendation part). This project is an extended version of the above mentioned project. Please star the original repo.
+This project is heavily inspired from **[this GitHub repository](https://github.com/7NNS7/Recommendation-System-for-Farming)** (especially the crop recommendation and fertilizer recommendation part). This project is an extended version of the above mentioned project. Please star the mentioned repo.
 
 ## License 📝
 This project is licensed under [GNU (GENERAL PUBLIC LICENSE)](https://github.com/Gladiator07/Harvestify/blob/master/LICENSE).
