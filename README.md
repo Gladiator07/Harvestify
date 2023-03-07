@@ -93,8 +93,8 @@ Note that, for now it only supports following crops
 - Once the project is cloned, open anaconda prompt in the directory where the project was cloned and paste the following block
   ```
   conda create -n harvestify python=3.6.12
-  pip install -r requirements.txt
   conda activate harvestify
+  pip install -r requirements.txt
   ```
 - And finally run the project with
   ```
