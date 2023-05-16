@@ -6,3 +6,4 @@ TEST_Project/
 __pycache__/
 New Plant Diseases Dataset(Augmented)/
 Docs/
+.DS_Store
